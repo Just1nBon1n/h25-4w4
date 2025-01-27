@@ -1,15 +1,13 @@
-.menu {
-    ul {
-      margin: 0;
-      padding: 0;
-  
-      li {
-        display: inline-block;
-  
-        a {
-          color: #333;
-          text-decoration: none;
-        }
-      }
+.menu { //ul
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px 0;
+  &__li { //li
+    
+    a { //a
+      text-decoration: none;
+      padding: 4px; 
     }
   }
+}

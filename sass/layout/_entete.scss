@@ -1,0 +1,9 @@
+.entete {
+    display: flex;
+    justify-content: space-between;
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
