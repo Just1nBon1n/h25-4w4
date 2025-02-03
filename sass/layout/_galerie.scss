@@ -1,0 +1,31 @@
+.section__galerie {
+    display: flex;
+    justify-content: center;
+}
+
+.conteneur__galerie {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteneur__galerie p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.galerie__figure {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.galerie__figure img {
+    width: 18vw;
+}

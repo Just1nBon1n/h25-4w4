@@ -62,7 +62,8 @@ Les composants
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  gap: 10px 0;
+  gap: 20px;
+  padding-right: 2rem;
 }
 @media screen and (max-width: 800px) {
   .menu {
@@ -72,6 +73,7 @@ Les composants
 .menu__li a {
   text-decoration: none;
   padding: 4px;
+  font-size: 1.2rem;
 }
 
 .recherche {
@@ -105,6 +107,7 @@ Layout
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 .entete__navigation {
   position: static;
@@ -125,6 +128,37 @@ Layout
   }
 }
 
+.section__galerie {
+  display: flex;
+  justify-content: center;
+}
+
+.conteneur__galerie {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteneur__galerie p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.galerie__figure {
+  margin: 0;
+  padding: 0;
+}
+
+.galerie__figure img {
+  width: 18vw;
+}
+
 .global {
   max-width: 1100px;
   padding: 10vh 5vw;
@@ -133,4 +167,29 @@ Layout
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+}
+
+.section__formulaire {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -2rem;
+}
+
+.conteneur__formulaire {
+  display: inline-flex;
+  align-items: end;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
+  box-shadow: 2px 2px 3px grey;
+  padding: 1rem;
+}
+
+.formulaire p {
+  margin: 0;
+}
+
+.formulaire__input {
+  border: 1.5px solid cyan;
 }/*# sourceMappingURL=style.css.map */
