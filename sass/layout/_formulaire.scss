@@ -4,6 +4,7 @@
     position: relative;
     top: -2rem
 }
+
 .conteneur__formulaire {
     display: inline-flex;
     align-items: end;
@@ -12,13 +13,20 @@
     background-color: white;
     box-shadow: 2px 2px 3px grey;
     padding: 1rem;
+
+    @media screen and (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .formulaire p {
     margin: 0;
-}
+} 
 
 .formulaire__input {
     border: 1.5px solid cyan;
 }
+
+
 
