@@ -1,0 +1,9 @@
+.hero {
+    background-image: url("images/maldives.jpg");
+    min-height: 100vh;
+
+    &__adresse, &__telephone {
+        font-weight: bold;
+    }
+}
+

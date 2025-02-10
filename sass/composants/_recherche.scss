@@ -1,0 +1,31 @@
+.recherche {
+    display: flex;
+    width: 14rem;
+    border: 1px solid;
+
+    // & prend le nom du selecteur parent
+    &__input {
+        border: none;
+        outline: none;
+        background-color: rgba(0,0,0, .05);
+        flex: 1;
+        padding: 3px;
+        &:hover {
+            background-color: rgba(0,0,0, .09);
+        }
+        &::placeholder {
+            color: rgba(0,0,0, .2);
+            font-style: italic;
+        }
+    }
+
+    &__img {
+        flex: 0 0 20px;
+        padding: 3px;
+    }
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+}
+

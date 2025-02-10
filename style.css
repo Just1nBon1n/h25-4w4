@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/*
+Theme Name: TP1 Justin Bonin
+Theme URI: https://referenced.ca/
+Author: Justin Bonin
+Author URI: https://github.com/Just1nBon1n/h25-4w4
+Description: Thème developpé dans le cadre du cour 4w4
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 5.3
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tp1-jb
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*///////////////////////////////////////
+Les variables
+///////////////////////////////////////*/
+/*///////////////////////////////////////
+Les balises de bases
+///////////////////////////////////////*/
+body {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 2.3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+h6 {
+  font-size: clamp(0.8rem, 1.7vw, 1.2rem);
+}
+
+p {
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+}
+
+/*///////////////////////////////////////
+Les composants
+///////////////////////////////////////*/
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 20px;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+.menu__li a {
+  text-decoration: none;
+  color: black;
+  padding: 4px;
+  font-size: 1.2rem;
+}
+
+.recherche {
+  display: flex;
+  width: 14rem;
+  border: 1px solid;
+}
+.recherche__input {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  flex: 1;
+  padding: 3px;
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 3px;
+}
+@media screen and (max-width: 800px) {
+  .recherche {
+    display: none;
+  }
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carte--grande {
+  flex: 1 1 250px;
+}
+.carte__image img {
+  width: 100%;
+}
+.carte__contenu {
+  background-color: aliceblue;
+}
+/*///////////////////////////////////////
+Layout
+///////////////////////////////////////*/
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.entete__navigation {
+  position: static;
+  flex-direction: row;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .entete__navigation {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+.section__galerie {
+  display: flex;
+  justify-content: center;
+}
+
+.conteneur__galerie {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  padding-bottom: 3rem;
+}
+
+.conteneur__galerie p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.galerie__figure {
+  margin: 0;
+  padding: 0;
+  flex-basis: calc(20% - 0.3rem);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1100px) {
+  .galerie__figure {
+    flex-basis: calc(33.33% - 0.3rem);
+  }
+}
+@media screen and (max-width: 800px) {
+  .galerie__figure {
+    flex-basis: calc(50% - 0.3rem);
+  }
+}
+
+.galerie__figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.global {
+  max-width: 1100px;
+  padding: 10vh 5vw;
+}
+
+.hero {
+  background-image: url("images/maldives.jpg");
+  min-height: 100vh;
+}
+.hero__adresse, .hero__telephone {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

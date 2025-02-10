@@ -1,0 +1,21 @@
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    &__navigation {
+        @media screen and (max-width: 800px) {
+            position: absolute;
+            top: 8rem;
+            right: 0;
+            background-color: #fff;
+            flex-direction: column;
+            width: 100vw;
+        }
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        display: flex;
+        align-items: center; 
+    }
+}
