@@ -1,5 +1,5 @@
     <?php get_header(); ?>
-    <h1>--- FRONT-PAGE.PHP ---</h1>
+    <h1>-------- FRONT-PAGE.PHP ----------</h1>
     <section class="hero">
         <div class="hero__contenu global">
             <h1 class="hero__titre">Club de voyage</h1>
@@ -21,7 +21,7 @@
         </div>
 
     </section>
-    <main>
+    <section class="galerie">
         <div class="galerie global">
             <figure class="galerie__figure">
                 <img src="" alt="" class="galerie__img">
@@ -39,14 +39,14 @@
                 <img src="" alt="" class="galerie__img">
             </figure>
         </div>
-    </main>
+    </section>
     <section class="populaire">
         <div class="global">
-            <?php if (have_posts()) : while (have_posts()) : the_post();
-            if (in_category("galerie")) {
-                the_content();
+            <?php if (have_posts()) : while (have_posts()) : the_post(); 
+            if (in_category("galerie"))  {
+                the_content() ;
             } else {    ?>
-            <?php get_template_part('gabarit/carte'); ?>
+                <?php get_template_part( 'gabarits/carte' ); ?>
             <?php } ?>
             <?php endwhile; endif; ?>
         </div>
