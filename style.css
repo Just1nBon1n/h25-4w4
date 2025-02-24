@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-Theme Name: TP1 Eddy Martin
-Theme URI: https://referenced.ca
-Author: Eddy Martin
-Author URI: https://github.com/eddytuto
+Theme Name: 4w4 Justin Bonin
+Theme URI: 
+Author: Justin Bonin
+Author URI: https://github.com/Just1nBon1n/h25-4w4
 Description: Thème développé dans le cadre du cours 4w4
 Version: 1.0
 Requires at least: 6.0
@@ -69,7 +69,7 @@ Les composants
     flex-direction: column;
   }
 }
-.menu__li a {
+.menu-item a {
   text-decoration: none;
   padding: 4px;
 }

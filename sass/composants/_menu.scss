@@ -7,11 +7,11 @@
     flex-direction: row;
     list-style-type: none;
     gap : 10px 0;
-    &__li{ // li
+    &-item{ // li
  
        a{ //a
         text-decoration : none;
         padding : 4px;
-       } 
+       }
     }
 }
