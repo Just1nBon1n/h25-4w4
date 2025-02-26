@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-Theme Name: 4w4 Justin Bonin
-Theme URI: 
+Theme Name: TP1 Justin Bonin
+Theme URI: https://referenced.ca
 Author: Justin Bonin
-Author URI: https://github.com/Just1nBon1n/h25-4w4
+Author URI: https://github.com/Just1nBon1n
 Description: Thème développé dans le cadre du cours 4w4
 Version: 1.0
 Requires at least: 6.0
@@ -16,7 +16,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 /* /////////////////////////////////
-Les variables
+Les variables 
 //////////////////////////////////// */
 /* /////////////////////////////////
 Les balise de bases
@@ -121,6 +121,11 @@ Les layouts
   padding: 10vh 5vw;
 }
 
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .entete {
   display: flex;
   justify-content: space-between;
@@ -148,5 +153,37 @@ Les layouts
 
 .hero {
   background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
   min-height: 100vh;
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: #000;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
 }/*# sourceMappingURL=style.css.map */

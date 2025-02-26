@@ -1,5 +1,4 @@
     <?php get_header(); ?>
-    <h1>-------- FRONT-PAGE.PHP ----------</h1>
     <section class="hero">
         <div class="hero__contenu global">
             <h1 class="hero__titre">Club de voyage</h1>
@@ -20,25 +19,6 @@
             </div>
         </div>
 
-    </section>
-    <section class="galerie">
-        <div class="galerie global">
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-        </div>
     </section>
     <section class="populaire">
         <div class="global">
