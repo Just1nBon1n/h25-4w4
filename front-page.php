@@ -18,8 +18,8 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=snapchat&color=000000" width="20" height="20">
             </div>
         </div>
-
     </section>
+
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 

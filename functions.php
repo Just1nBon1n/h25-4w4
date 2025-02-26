@@ -11,7 +11,7 @@ function mon_theme_supports() {
     'flex-height' => true,
     'flex-width'  => true,
 ));
-   
+
 }
 add_action( 'after_setup_theme', 'mon_theme_supports' );
 

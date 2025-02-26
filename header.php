@@ -25,6 +25,7 @@
                     'container_class' => 'entete__menu'
                 )); ?>
                 <?php get_search_form() ?>
+
             </div> <!-- fin entete__navigation  -->
         </div>
     </header>
