@@ -6,7 +6,7 @@
                 <?php bloginfo('description'); ?>
             </p>
             <p class="hero__courriel">
-                <a href="#">info@cmaisonneuve.qc.ca</a>
+            <?php bloginfo('admin_email'); ?>
             </p>
             <p class="hero__adresse">
                 5800 Sherbrooke-est - Montréal (Québec) H1X 2A2
