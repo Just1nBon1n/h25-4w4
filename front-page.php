@@ -1,9 +1,9 @@
     <?php get_header(); ?>
     <section class="hero">
         <div class="hero__contenu global">
-            <h1 class="hero__titre">Club de voyage</h1>
+            <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quo, veritatis eum incidunt earum ex libero officia nemo repudiandae molestias, vitae omnis magnam exercitationem provident ratione impedit vel culpa consequatur.
+                <?php bloginfo('description'); ?>
             </p>
             <p class="hero__courriel">
                 <a href="#">info@cmaisonneuve.qc.ca</a>
@@ -18,8 +18,8 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=snapchat&color=000000" width="20" height="20">
             </div>
         </div>
-    </section>
 
+    </section>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 
