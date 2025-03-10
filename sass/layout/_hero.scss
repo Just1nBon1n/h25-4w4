@@ -1,5 +1,7 @@
 .hero{
     background-image: url("images/maldives.jpg");
     background-repeat: no-repeat;
+    background-size: cover; // Ajoutez cette ligne
+    background-position: center; // Optionnel : centre l'image
     min-height: 100vh;
 }
