@@ -5,8 +5,10 @@
         $hero_background = get_theme_mod('hero_background', ''); 
         $hero_cta_text = get_theme_mod('hero_cta_text', 'Default Title');
         $hero_cta_link = get_theme_mod('hero_cta_link', '#');
+        $hero_texte_couleur = get_theme_mod('hero_texte_couleur', '#000000');
     ?>
-    <section class="hero" style="background-image: url(<?php echo $hero_background ?>)">
+    <section class="hero" style="background-image: url(<?php echo $hero_background ?>);
+                                 color: <?php echo $hero_texte_couleur; ?>">
         <div class="hero__contenu global">
             <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description">

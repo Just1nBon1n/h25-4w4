@@ -68,6 +68,17 @@
       'type' => 'url',
     ));
 
+    ////////////////////////////////////////////// ajout de la donnée (couleur du texte)
+    $wp_customize->add_setting('hero_texte_couleur', array(
+      'default' => '#000000',
+      'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_texte_couleur', array(
+      'label' => __('Couleur du texte', 'theme_tp'),
+      'section' => 'hero_section',
+    )));
+
     ////////////////////////////////////////////// FOOTER SECTION //////////////////////////////////////////////
     // Création d'une nouvelle section dans le customizer
     $wp_customize->add_section('footer_section', array(
