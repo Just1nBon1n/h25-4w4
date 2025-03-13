@@ -2,12 +2,25 @@
   function theme_tp_customize_register($wp_customize) {
     // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
 
-    ////////////////////////////////////////////// HERO SECTION
+    ////////////////////////////////////////////// HERO SECTION //////////////////////////////////////////////
     // Création d'une nouvelle section dans le customizer
     $wp_customize->add_section('hero_section', array(
       'title' => __('Section Hero', 'theme_tp'),
       'priority' => 30,
     ));
+
+    ////////////////////////////////////////////// ajout de la donnée (adresse auteur)
+    $wp_customize->add_setting('hero_adresse', array(
+      'default' => __('justinbonin7@gmail.com', 'theme_tp'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control('hero_adresse', array(
+      'label' => __('Adresse', 'theme_tp'),
+      'section' => 'hero_section',
+      'type' => 'text',
+    ));
+
     ////////////////////////////////////////////// ajout de la donnée (auteur)
     $wp_customize->add_setting('hero_auteur', array(
       'default' => __('Justin Bonin', 'theme_tp'),
@@ -15,10 +28,11 @@
     ));
     ////////////////////////////////////////////// ajout du controle de la donnée
     $wp_customize->add_control('hero_auteur', array(
-      'label' => __('Hero Auteur', 'theme_tp'),
+      'label' => __('Auteur', 'theme_tp'),
       'section' => 'hero_section',
       'type' => 'text',
     ));
+
     ////////////////////////////////////////////// ajout image en arrière plan
     $wp_customize->add_setting('hero_background', array(
       'default' => '',
@@ -29,6 +43,7 @@
       'label' => __('Image en arriere plan', 'theme_tp'),
       'section' => 'hero_section',
     )));
+
     ////////////////////////////////////////////// ajout de la donnée (texte du bouton)
     $wp_customize->add_setting('hero_cta_text', array(
       'default' => __('CTA text', 'theme_tp'),
@@ -40,6 +55,7 @@
       'section' => 'hero_section',
       'type' => 'text',
     ));
+
     ////////////////////////////////////////////// ajout de la donnée (lien du bouton)
     $wp_customize->add_setting('hero_cta_link', array(
       'default' => '#',
@@ -52,12 +68,13 @@
       'type' => 'url',
     ));
 
-    ////////////////////////////////////////////// FOOTER SECTION
+    ////////////////////////////////////////////// FOOTER SECTION //////////////////////////////////////////////
     // Création d'une nouvelle section dans le customizer
     $wp_customize->add_section('footer_section', array(
       'title' => __('Section Footer', 'theme_tp'),
       'priority' => 30,
     ));
+
     ////////////////////////////////////////////// ajout de la donnée (adresse)
     $wp_customize->add_setting('footer_adresse', array(
       'default' => __('3800, Sherbrooke Est, Montréal, Québec, H1X 2A2', 'theme_tp'),

@@ -1,5 +1,6 @@
     <?php get_header(); ?>
     <?php
+        $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
         $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
         $hero_background = get_theme_mod('hero_background', ''); 
         $hero_cta_text = get_theme_mod('hero_cta_text', 'Default Title');
@@ -12,7 +13,7 @@
                 <?php bloginfo('description'); ?>
             </p>
             <p class="hero__courriel">
-            <?php bloginfo('admin_email'); ?>
+                <?php echo($hero_adresse); ?>
             </p>
             <p class="hero__adresse">
                 5800 Sherbrooke-est - Montréal (Québec) H1X 2A2
