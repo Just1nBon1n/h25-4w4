@@ -38,6 +38,7 @@
             <div class="piedpage__s3__description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vero explicabo iure sit enim, ea ducimus nesciunt inventore impedit blanditiis unde omnis facere, deleniti eligendi fuga molestias dolor eveniet laborum!
             </div>
+            
         </section>
     </div>
 </footer>

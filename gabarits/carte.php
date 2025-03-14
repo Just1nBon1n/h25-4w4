@@ -4,9 +4,9 @@
  */
 ?>
 <article class="carte carte--grande">
-  <figure class="carte__image">
+  <!-- <figure class="carte__image">
     <img src="voyage.jpg" alt="Image de voyage">
-    </figure>
+  </figure> -->
   <div class="carte__contenu">
     <?php
         if (has_post_thumbnail()) {
@@ -17,5 +17,7 @@
     <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink() ?>">suite ...</a>
     <?php the_category(); ?>
     <p>Température maximum : <?php the_field('temperature_maximum'); ?>&#176;C</p>
+    <p>Température minimum : <?php the_field('temperature_minimum'); ?>&#176;C</p>
+    <p>Température moyenne : <?php the_field('temperature_moyenne'); ?>&#176;C</p>
   </div>
 </article>
