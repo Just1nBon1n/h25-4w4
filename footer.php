@@ -1,6 +1,7 @@
 <?php 
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
+    $footer_mission = get_theme_mod('footer_mission', 'Default Title');
 ?>
 <footer>
     <div class="piedpage global">
@@ -36,9 +37,9 @@
                 Missions du club
             </div>
             <div class="piedpage__s3__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vero explicabo iure sit enim, ea ducimus nesciunt inventore impedit blanditiis unde omnis facere, deleniti eligendi fuga molestias dolor eveniet laborum!
+                <!-- La mission de Mondo Voyage est de réunir des passionnés de découverte autour d’expériences de voyage authentiques. Le club favorise l’exploration, le partage et la création de liens, tout en promouvant un tourisme responsable et enrichissant. -->
+                <?php echo($footer_mission); ?>
             </div>
-            
         </section>
     </div>
 </footer>
