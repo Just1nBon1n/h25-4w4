@@ -2,6 +2,9 @@
     <?php 
         get_template_part('gabarits/hero'); 
     ?>
+    <?php 
+        get_template_part('gabarits/formulaire');
+    ?>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 

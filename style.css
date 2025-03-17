@@ -208,4 +208,35 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
+}
+
+.section__formulaire {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -2rem;
+}
+
+.conteneur__formulaire {
+  display: inline-flex;
+  align-items: end;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
+  box-shadow: 2px 2px 3px grey;
+  padding: 1rem;
+}
+@media screen and (max-width: 1100px) {
+  .conteneur__formulaire {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.formulaire p {
+  margin: 0;
+}
+
+.formulaire__input {
+  border: 1.5px solid cyan;
 }/*# sourceMappingURL=style.css.map */
