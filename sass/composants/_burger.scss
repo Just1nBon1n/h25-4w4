@@ -11,6 +11,7 @@
       height: 21px;
       cursor: pointer;
       position: relative;
+      z-index: 10; // Assurez-vous que le bouton est au-dessus du menu
   }
 
   .menu-burger-label span {
@@ -49,11 +50,12 @@
   }
 
   .entete__navigation {
-      transform: translateX(100%); 
-      transition: transform 0.5s ease-in-out; 
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in-out;
+      z-index: 5; // Placez le menu derrière le bouton
   }
 
   .menu-burger-checkbox:checked ~ .entete__navigation {
-      transform: translateX(0); 
+      transform: translateX(0);
   }
 }

@@ -1,26 +1,22 @@
-.entete{
+.entete {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__navigation {
         @media screen and (max-width: 800px) {
             position : absolute;
-            top:0;
+            top: 0;
             right:0;
             background-color: #fff;
-            padding : 20px;
+            padding-top : 4rem;
             flex-direction: column; 
             width : 100vw;
         }
         width : auto;
-        position : static;
         flex-direction: row; 
         background-color: transparent;
-
         display: flex;
-        
-        align-items: center;
-                                                                   
+        align-items: center;                     
     }
 
     .custom-logo {
