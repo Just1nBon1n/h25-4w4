@@ -7,24 +7,47 @@
     flex-direction: column;
     justify-content: space-between;
    &--grande{
-    flex: 1 1 250px;
+        flex: 1 1 350px;
+        padding: 1rem;
    } 
    &__image{
-
     img{
+        display: flex;
+        justify-content: center;
         width : 100%;
     }
    }
    &__contenu{
-       background-color: rgba(157, 194, 234, 0.499); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(223, 223, 223, 0.37); 
+        border: 5px solid rgba(99, 99, 99, 0.144);
+        border-radius: 1rem;
    }
    &__titre{
-    
+        margin: 0;
+        margin-top: 1rem;
+        text-align: center;
    }
-   &__description{}
+   &__description{
+        text-align: center;
+   }
    &__bouton{
-    &--actif{}
+    &--actif{
+        color: black;
+        text-decoration: none;
+        background-color: #f1f1f173;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    &--actif:hover{
+        background-color: #f1f1f1;
+    }
    }
 
-
+   & > ul {
+    color: black;
+   }
 }

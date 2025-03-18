@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0000004f;
+    
     &__navigation {
         @media screen and (max-width: 800px) {
             position : absolute;
@@ -13,12 +15,16 @@
             padding-top : 4rem;
             flex-direction: column; 
             width : 100vw;
+            background-color: #ffffffc7;
+            margin-right: 0;
         } 
         width : auto;
         flex-direction: row; 
         background-color: transparent;
         display: flex;
-        align-items: center;                     
+        align-items: center;
+        margin-right: 2rem;
+        gap: 2rem;
     }
 
     .custom-logo {
