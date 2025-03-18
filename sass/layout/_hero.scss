@@ -8,3 +8,8 @@
     background-position: center; // Optionnel : centre l'image
     min-height: 100vh;
 }
+
+.hero__icone {
+    display: flex;
+    gap: 15px;
+}

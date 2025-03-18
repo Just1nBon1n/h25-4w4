@@ -66,6 +66,10 @@ p {
   font-size: clamp(0.8rem, 1.7vw, 1rem);
 }
 
+div {
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
+}
+
 /* /////////////////////////////////
 Les composants
 //////////////////////////////////// */
@@ -89,6 +93,9 @@ Les composants
 .menu-item a {
   text-decoration: none;
   color: black;
+}
+.menu-item a:hover {
+  color: rgb(143, 17, 17);
 }
 
 /*
@@ -263,6 +270,11 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+}
+
+.hero__icone {
+  display: flex;
+  gap: 15px;
 }
 
 /*
