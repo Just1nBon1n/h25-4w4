@@ -1,3 +1,6 @@
+/*
+  --------------------------------- Layout de l'entete
+*/
 .entete {
     display: flex;
     justify-content: space-between;
@@ -7,7 +10,6 @@
             position : absolute;
             top: 0;
             right:0;
-            background-color: #fff;
             padding-top : 4rem;
             flex-direction: column; 
             width : 100vw;
