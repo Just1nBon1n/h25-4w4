@@ -78,6 +78,7 @@ Les composants
   list-style-type: none;
   align-items: center;
   padding: 0;
+  margin: 0;
   gap: 10px;
 }
 @media screen and (max-width: 800px) {
@@ -87,6 +88,7 @@ Les composants
 }
 .menu-item a {
   text-decoration: none;
+  color: black;
 }
 
 /*
@@ -95,6 +97,7 @@ Les composants
 .recherche {
   display: flex;
   height: 1.6rem;
+  width: 14.6rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
@@ -277,6 +280,7 @@ footer {
 .piedpage__haut {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 4rem;
 }
 .piedpage__s1 {
   display: flex;
@@ -295,6 +299,11 @@ footer {
   display: flex;
   flex-direction: column;
 }
+.piedpage__s2__adresse {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .piedpage__s3 {
   display: flex;
   flex-direction: column;
@@ -306,14 +315,14 @@ footer {
 }
 .piedpage__bas {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .piedpage .titre {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /*
