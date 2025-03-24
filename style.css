@@ -425,4 +425,19 @@ footer {
 
 .erreur_barre {
   font-size: 40px;
+}
+
+.bouton_acceuil {
+  font-size: 25px;
+  background-color: black;
+}
+
+.bouton_acceuil a {
+  text-decoration: none;
+  color: white;
+}
+
+.bouton_acceuil:hover {
+  color: black;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
