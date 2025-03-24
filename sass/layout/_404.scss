@@ -12,16 +12,24 @@
 .bouton_acceuil {
   font-size: 25px;
   background-color: black;
-}
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; // Ajout de la transition
 
-.bouton_acceuil a {
-  text-decoration: none;
-  color: white;
-}
+  a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; // Transition pour la couleur du texte
+  }
 
-.bouton_acceuil:hover {
-  color: black;
-  background-color: white;
+  &:hover {
+    background-color: white;
+    transform: scale(1.05); // Légère mise en avant au survol
+  }
+
+  &:hover a {
+    color: black;
+  }
 }
 
 

@@ -430,14 +430,19 @@ footer {
 .bouton_acceuil {
   font-size: 25px;
   background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .bouton_acceuil a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease;
 }
-
 .bouton_acceuil:hover {
-  color: black;
   background-color: white;
+  transform: scale(1.05);
+}
+.bouton_acceuil:hover a {
+  color: black;
 }/*# sourceMappingURL=style.css.map */
