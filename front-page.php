@@ -1,4 +1,6 @@
-    <?php get_header(); ?>
+    <header>
+        <?php get_header(); ?>
+    </header>
     <?php 
         get_template_part('gabarits/hero'); 
     ?>
@@ -16,7 +18,8 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
-    <footer></footer>
-    <?php get_footer(); ?>
+    <footer>
+        <?php get_footer(); ?>
+    </footer>
 </body>
 </html>

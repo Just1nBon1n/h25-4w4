@@ -1,8 +1,8 @@
-    <?php get_header(); ?>
+<body>
+   <?php get_header(); ?>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
             <?php
                 if (has_post_thumbnail()) {
                 the_post_thumbnail('large'); }
