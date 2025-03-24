@@ -1,25 +1,23 @@
-    <header>
-        <?php get_header(); ?>
-    </header>
-    <?php 
-        get_template_part('gabarits/hero'); 
-    ?>
-    <?php 
-        get_template_part('gabarits/formulaire');
-    ?>
-    <section class="populaire">
-        <div class="global">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); 
-            if (in_category("galerie"))  {
-                the_content() ;
-            } else {    ?>
-                <?php get_template_part( 'gabarits/carte' ); ?>
-            <?php } ?>
-            <?php endwhile; endif; ?>
-        </div>
-    </section>
-    <footer>
-        <?php get_footer(); ?>
-    </footer>
+    <?php get_header(); ?>
+    <main>
+        <?php 
+            get_template_part('gabarits/hero'); 
+        ?>
+        <?php 
+            get_template_part('gabarits/formulaire');
+        ?>
+        <section class="populaire">
+            <div class="global">
+                <?php if (have_posts()) : while (have_posts()) : the_post(); 
+                if (in_category("galerie"))  {
+                    the_content() ;
+                } else {    ?>
+                    <?php get_template_part( 'gabarits/carte' ); ?>
+                <?php } ?>
+                <?php endwhile; endif; ?>
+            </div>
+        </section>
+    </main>
+    <?php get_footer(); ?>
 </body>
 </html>

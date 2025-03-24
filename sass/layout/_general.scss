@@ -15,6 +15,15 @@ body {
     background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
     background-size: 200% 100%; 
     animation: gradient-move 10s linear infinite alternate; 
+
+    // Pour que la page prenne au minimum toute la hauteur de l'écran
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 @keyframes gradient-move {

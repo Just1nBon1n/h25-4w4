@@ -1,14 +1,12 @@
+<?php get_header(); ?>
+
 <main>
-  <header>
-    <?php get_header(); ?>
-  </header>
-  <body>
-    <section class="erreur_404">
-      <h2>Erreur 404</h2>
-      <p>La page que vous cherchez n'existe pas.</p>
-    </section>
-  </body>
-  <footer>
-    <?php get_footer(); ?>
-  </footer>
+  <p class="erreur_barre haut">//////////////////////////////////////////////////////////////////////////////////////////</p>
+  <section class="erreur_404">
+    <h1>Erreur 404</h1>
+    <h3>La page que vous cherchez n'existe pas.</h3>
+  </section>
+  <p class="erreur_barre bas">//////////////////////////////////////////////////////////////////////////////////////////</p>
 </main>
+
+<?php get_footer(); ?>
