@@ -1,4 +1,4 @@
-# TP1
+# TP2
 
 ## Concevoir un site Wordpress pour un club de voyage
 
