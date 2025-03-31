@@ -121,6 +121,37 @@
       'section' => 'footer_section',
       'type' => 'text',
     ));
+
+    ////////////////////////////////////////////// ERREUR 404 SECTION //////////////////////////////////////////////
+    // Création d'une nouvelle section dans le customizer
+    $wp_customize->add_section('erreur_404_section', array(
+      'title' => __('Section Erreur 404', 'theme_tp'),
+      'priority' => 30,
+    ));
+
+    ////////////////////////////////////////////// ajout de la donnée (titre)
+    $wp_customize->add_setting('erreur_404_titre', array(
+      'default' => __('Erreur 404', 'theme_tp'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control('erreur_404_titre', array(
+      'label' => __('Titre de la page 404', 'theme_tp'),
+      'section' => 'erreur_404_section',
+      'type' => 'text',
+    ));
+
+    ////////////////////////////////////////////// ajout de la donnée (texte)
+    $wp_customize->add_setting('erreur_404_texte', array(
+      'default' => __('Lorem ipsum', 'theme_tp'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control('erreur_404_texte', array(
+      'label' => __('Texte de la page 404', 'theme_tp'),
+      'section' => 'erreur_404_section',
+      'type' => 'text',
+    ));
   }
 
   add_action('customize_register', 'theme_tp_customize_register');
