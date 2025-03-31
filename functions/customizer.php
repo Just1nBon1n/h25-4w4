@@ -152,6 +152,28 @@
       'section' => 'erreur_404_section',
       'type' => 'text',
     ));
+
+    ////////////////////////////////////////////// ajout image en arrière plan
+    $wp_customize->add_setting('erreur_404_background', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_404_background', array(
+      'label' => __('Image en arriere plan', 'theme_tp'),
+      'section' => 'erreur_404_section',
+    )));
+
+    ////////////////////////////////////////////// ajout de la donnée (couleur du texte)
+    $wp_customize->add_setting('erreur_404_texte_couleur', array(
+      'default' => '#000000',
+      'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    ////////////////////////////////////////////// ajout du controle de la donnée
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_404_texte_couleur', array(
+      'label' => __('Couleur du texte', 'theme_tp'),
+      'section' => 'erreur_404_section',
+    )));
   }
 
   add_action('customize_register', 'theme_tp_customize_register');

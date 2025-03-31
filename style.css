@@ -421,6 +421,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
 }
 
 .erreur_barre {
