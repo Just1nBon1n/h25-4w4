@@ -10,10 +10,48 @@
   background-size: cover; 
   background-position: center;
   min-height: 80vh;
-}
 
-.erreur_barre {
-  font-size: 40px;
+  &_titre {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &_texte {
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &_menu {
+    .menu { // ul
+      display : flex;
+      @media screen and (max-width: 800px) {
+          flex-direction: column;
+      }
+      flex-direction: row;
+      list-style-type: none;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      gap : 10px;
+      &-item{ // li
+  
+        a { //a
+              text-decoration : none;
+              color: black;
+        } 
+
+        a:hover {
+              color: rgb(143, 17, 17);
+        }
+      }
+    }
+  }
 }
 
 .bouton_acceuil {
