@@ -228,6 +228,21 @@ Les composants
     transform: translateX(0);
   }
 }
+/* 
+Bouton catégories
+*/
+.categorie__ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+.categorie__ul__li {
+  padding: 0.8rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: white;
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
