@@ -35,16 +35,30 @@ Script JS permettant d'extraire les destinations de voyage
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
                     articleElement.innerHTML = `
-                        <h3>${article.title.rendered}</h3>
+                        <h3>${article.title.rendered} <div class="bouton">X</div> </h3>
                         <div>${article.excerpt.rendered}</div>
                         <a href="${article.link}">Lire plus</a>
                     `;
                     destinationList .appendChild(articleElement);
                 });
+
+                // Ajoute un écouteur d'événement pour chaque bouton "X" apres le chargement des articles
+                menuBouton();
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }
+
+    function menuBouton() {
+        const menuBouton = document.querySelector('.destination .bouton');
+        const menu = document.querySelector('.destination p');
+        menuBouton.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            console.log("menu cliqué :", menuBouton);
+        });
+    }
 })()
+
+
 
 
 

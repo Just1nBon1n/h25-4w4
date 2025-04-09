@@ -243,6 +243,27 @@ Bouton catégories
   background-color: white;
 }
 
+.destination__list h3 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.destination .bouton {
+  background-color: red;
+  padding: 0.6rem;
+}
+
+.destination__list p {
+  background-color: greenyellow;
+  padding: 0.6rem;
+}
+
+.destination__list a {
+  background-color: yellow;
+  padding: 0.6rem;
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */

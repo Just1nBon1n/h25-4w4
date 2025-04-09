@@ -12,3 +12,31 @@ Bouton catégories
     background-color: white;
   }
 }
+
+.destination {
+  &__list h3 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.destination .bouton {
+  background-color: red;
+  padding: .6rem;
+}
+
+.destination {
+  &__list p {
+    background-color: greenyellow;
+    padding: .6rem;
+  }
+}
+
+.destination {
+  &__list a {
+    background-color: yellow;
+    padding: .6rem;
+  }
+}
+  
