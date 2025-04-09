@@ -28,8 +28,15 @@ Bouton catégories
 
 .destination {
   &__list p {
-    background-color: greenyellow;
+    display: none;
+  }
+}
+
+.destination {
+  &__list p.active {
+    display: inline-block;  
     padding: .6rem;
+    background-color: gray;
   }
 }
 

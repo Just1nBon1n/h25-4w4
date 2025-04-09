@@ -48,14 +48,22 @@ Script JS permettant d'extraire les destinations de voyage
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }
 
+    
     function menuBouton() {
-        const menuBouton = document.querySelector('.destination .bouton');
-        const menu = document.querySelector('.destination p');
-        menuBouton.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            console.log("menu cliqué :", menuBouton);
+        const boutons = document.querySelectorAll('.destination .bouton');
+    
+        boutons.forEach(function(elm) {
+            elm.addEventListener('click', function() {
+                console.log("menu cliqué :", this);
+                const parent = this.parentElement.parentElement;
+                const p = parent.querySelector('p');
+                if (p) {
+                    p.classList.toggle('active');
+                }
+            });
         });
     }
+       
 })()
 
 

@@ -255,8 +255,13 @@ Bouton catégories
 }
 
 .destination__list p {
-  background-color: greenyellow;
+  display: none;
+}
+
+.destination__list p.active {
+  display: inline-block;
   padding: 0.6rem;
+  background-color: gray;
 }
 
 .destination__list a {
@@ -347,7 +352,6 @@ main {
   --------------------------------- Layout de la section hero
 */
 .hero {
-  background-image: url("images/maldives.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
