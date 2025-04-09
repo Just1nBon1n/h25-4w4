@@ -12,15 +12,18 @@ Script JS permettant d'extraire les destinations de voyage
 
     function parcourir_bouton() {
         const category__ul__li = document.querySelectorAll('.categorie__ul__li');
+    
         category__ul__li.forEach(elm => {
             elm.addEventListener('click', function() {
-                console.log("Bonton cliqué :", this);
-                categoryId = this.dataset.categoryId; // suppose que tu as un data-category-id sur tes boutons
-                
-                fetchDestinations(apiUrl);
-            })
-        })
+                console.log("Bouton cliqué :", this);
+                category__ul__li.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                categoryId = this.dataset.categoryId;
+                fetchDestinations();
+            });
+        });
     }
+    
 
     function fetchDestinations() {
         // console.log("API appelée :", apiUrl);
@@ -35,7 +38,7 @@ Script JS permettant d'extraire les destinations de voyage
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
                     articleElement.innerHTML = `
-                        <h3>${article.title.rendered} <div class="bouton">X</div> </h3>
+                        <h3>${article.title.rendered} <div class="bouton"></div> </h3>
                         <div>${article.excerpt.rendered}</div>
                         <a href="${article.link}">Lire plus</a>
                     `;
@@ -59,6 +62,7 @@ Script JS permettant d'extraire les destinations de voyage
                 const p = parent.querySelector('p');
                 if (p) {
                     p.classList.toggle('active');
+                    this.classList.toggle('active');     
                 }
             });
         });

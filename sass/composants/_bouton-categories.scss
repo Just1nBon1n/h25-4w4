@@ -1,18 +1,41 @@
 /* 
 Bouton catégories
 */
+
+// section destination
+.destination {
+  margin: 25vh 5vw;
+  padding: 5vh 5vw;
+  background-color: rgba(255, 255, 255, 0.322);
+  border-radius: 2rem;
+}
+
+// Menu des catégories
 .categorie__ul {
   display: flex;
-  gap: 10px;
+  gap: 1.2rem;
   list-style-type: none;
+  padding: 0;
   &__li {
     padding: .8rem;
-    border: 2px solid black;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
     background-color: white;
+    font-size: 1.4rem;
   }
 }
 
+.categorie__ul li:hover {
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
+.categorie__ul li.active {
+  background-color: rgb(255, 217, 0);
+  color: black;
+}
+
+// Titre
 .destination {
   &__list h3 {
     display: flex;
@@ -21,11 +44,30 @@ Bouton catégories
   }
 }
 
+// Bouton 
 .destination .bouton {
-  background-color: red;
-  padding: .6rem;
+  background-color: white;
+  padding: .8rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
+.destination .bouton::after {
+  content: "+";
+  font-size: 1.5rem;
+}
+
+.destination .bouton.active::after {
+  content: "-";
+  font-size: 1.5rem;
+}
+
+.destination .bouton:hover {
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
+// Description
 .destination {
   &__list p {
     display: none;
@@ -35,15 +77,21 @@ Bouton catégories
 .destination {
   &__list p.active {
     display: inline-block;  
-    padding: .6rem;
-    background-color: gray;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: rgba(255, 233, 188, 0.763);
+    border-radius: 1rem;
   }
 }
 
+// Lire plus
 .destination {
   &__list a {
-    background-color: yellow;
+    background-color: rgb(255, 217, 0);
     padding: .6rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: black;
   }
 }
   
