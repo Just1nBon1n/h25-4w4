@@ -32,9 +32,9 @@
       'section' => 'hero_section',
       'type' => 'text',
     ));
+    
 
     ////////////////////////////////////////////// ajout image en arrière plan
-
     for ($i = 1; $i <= 3; $i++) {
       $wp_customize->add_setting('hero_background_' . $i, array(
         'default' => '',
@@ -56,6 +56,7 @@
       'label' => __('Image en arriere plan', 'theme_tp'),
       'section' => 'hero_section',
     )));
+
 
     ////////////////////////////////////////////// ajout de la donnée (texte du bouton)
     $wp_customize->add_setting('hero_cta_text', array(
