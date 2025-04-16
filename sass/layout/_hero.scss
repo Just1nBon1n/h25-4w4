@@ -7,15 +7,6 @@
     background-size: cover; 
     background-position: center; 
     min-height: 100vh;
-
-    &__carrousel{
-      position : absolute;
-      min-height: 100vh;
-      width : 100%;
-      background-size: cover;
-      background-position: center;
-      z-index : -1;
-   }
    &__radio {
        position : absolute;
        width : 100%;
@@ -34,4 +25,19 @@
 .hero__icone {
     display: flex;
     gap: 15px;
+}
+
+.hero__contenu {
+  display: inline-block;
+  background-color: rgba(182, 182, 182, 0.7);
+  padding: 1rem;
+  margin: 10vh 5vw;
+  border-radius: 2rem;
+}
+
+.hero__cta {
+  background-color: $couleur__Jaune__Primaire;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding: .7rem;
 }

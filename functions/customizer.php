@@ -35,7 +35,7 @@
     
 
     ////////////////////////////////////////////// ajout image en arrière plan
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 0; $i <= 2; $i++) {
       $wp_customize->add_setting('hero_background_' . $i, array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',

@@ -5,18 +5,12 @@
   $hero_cta_link = get_theme_mod('hero_cta_link', '#');
   $hero_texte_couleur = get_theme_mod('hero_texte_couleur', '#000000');
 
-  for ($i = 1; $i <= 3; $i++) {
+  for ($i = 0; $i <= 2; $i++) {
     $hero_background[$i] = get_theme_mod('hero_background_' . $i, '');
 }
 ?>
 
-<!-- ////////////////////////////////////////////// Carrousel background -->
-<?php 
-    
-?>
-
-<section class="hero" style="background-image: url(<?php echo $hero_background[0] ?>);
-                            color: <?php echo $hero_texte_couleur; ?>">
+<section class="hero" style="color: <?php echo $hero_texte_couleur; ?>">
     <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
     <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
     <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
@@ -26,7 +20,9 @@
         <input  class="hero__radio__input" data-id_radio="2" type="radio" name="carroussel">
     </div>
     <div class="hero__contenu global">
-        <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+        <h1 class="hero__titre">
+            <?php bloginfo('name'); ?>
+        </h1>
         <p class="hero__description">
             <?php bloginfo('description'); ?>
         </p>
