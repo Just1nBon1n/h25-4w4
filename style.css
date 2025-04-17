@@ -439,6 +439,7 @@ main {
   background-position: center;
   z-index: -1;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .hero__carrousel--active {
   opacity: 1;
@@ -534,7 +535,7 @@ footer {
 }
 
 .formulaire__input {
-  border: 1.5px solid cyan;
+  border: 3px solid rgb(255, 217, 0);
 }
 
 .erreur_404 {
