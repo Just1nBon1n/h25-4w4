@@ -3,23 +3,20 @@
 */
 .recherche{
     display:flex;
-    height: 1.6rem;
-    width : 15rem;
-    border: 1px solid  rgba(0, 0, 0, 0.1);
-
+    border: 3px solid $couleur__jaune__primaire;
 
 // le & prend la valeur du sélecteur parent 
     &__input{
         border : none;
         outline: none;
-        background-color: rgba(0,0,0, .01);
-        flex : 1;
-        padding : 3px;
+        background-color: transparent;
+        padding : .5rem;
+        color: $couleur__blanc__primaire;
         &:hover{
             background-color: rgba(0,0,0, .05); 
         }
         &::placeholder{
-            color: rgba(0,0,0, .2);
+            color: $couleur__blanc__primaire;
             font-style : italic;
         }
 

@@ -3,25 +3,25 @@
       <div class="formulaire">
           <p>Nom</p>
           <form class="formulaire__form">
-              <input type="search" placeholder="Ecrivez votre nom" class="formulaire__input">
+              <input type="search" placeholder="Écrivez votre nom" class="formulaire__input">
           </form>
       </div>
       <div class="formulaire">
-          <p>Prenom</p>
+          <p>Prénom</p>
           <form class="formulaire__form">
-              <input type="search" placeholder="Ecrivez votre prenom" class="formulaire__input">
+              <input type="search" placeholder="Écrivez votre prenom" class="formulaire__input">
           </form>
       </div>
       <div class="formulaire">
-          <p>courriel</p>
+          <p>Courriel</p>
           <form class="formulaire__form">
-              <input type="search" placeholder="Ecrivez votre courriel" class="formulaire__input">
+              <input type="search" placeholder="Écrivez votre courriel" class="formulaire__input">
           </form>
       </div>
       <div class="formulaire">
-          <p>telephone</p>
+          <p>Téléphone</p>
           <form class="formulaire__form">
-              <input type="search" placeholder="Ecrivez votre téléphone" class="formulaire__input">
+              <input type="search" placeholder="Écrivez votre téléphone" class="formulaire__input">
           </form>
       </div>
       <div class="formulaire">

@@ -15,20 +15,23 @@
             padding-top : 4rem;
             flex-direction: column; 
             width : 100vw;
-            background-color: #ffffffc7;
+            background-color: $couleur__gris__boite;
             margin-right: 0;
         } 
         width : auto;
         flex-direction: row; 
-        background-color: transparent;
         display: flex;
         align-items: center;
         margin-right: 2rem;
         gap: 2rem;
     }
+}
 
-    .custom-logo {
-        max-width: 150px;
-        height: auto;
-        }
+.custom-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+:where(figure) {
+    margin: 0;
 }

@@ -29,15 +29,17 @@
 
 .hero__contenu {
   display: inline-block;
-  background-color: rgba(182, 182, 182, 0.7);
+  background-color: $couleur__gris__boite;
   padding: 1rem;
   margin: 10vh 5vw;
   border-radius: 2rem;
 }
 
 .hero__cta {
-  background-color: $couleur__Jaune__Primaire;
+  border: 3px solid $couleur__jaune__primaire;
+  background-color: $couleur__gris__primaire;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   padding: .7rem;
+  border-radius: 1.5rem;
 }

@@ -17,11 +17,11 @@
   
         a { //a
               text-decoration : none;
-              color: black;
+              color: $couleur__blanc__primaire;
         } 
 
         a:hover {
-              color: rgb(143, 17, 17);
+              color: $couleur__orange__hover;
         }
       }
   }
