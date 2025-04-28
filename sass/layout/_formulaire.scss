@@ -25,9 +25,13 @@
 
 .formulaire p {
   margin: 0;
+  padding-bottom: .3rem;
 } 
 
 .formulaire__input {
   border: 3px solid $couleur__jaune__primaire;
+  padding: .3rem;
+  border-radius: 1rem;
   background-color: $couleur__gris__primaire;
+  outline: none;
 }

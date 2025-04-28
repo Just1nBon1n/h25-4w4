@@ -7,20 +7,36 @@
     background-size: cover; 
     background-position: center; 
     min-height: 100vh;
-   &__radio {
-       position : absolute;
-       width : 100%;
-       bottom: 0;
-       display: flex;
-       justify-content: center;
-       gap : 2rem;
-      }
-
-
-   &__contenu {
-       z-index : 9;
-   }
+    &__radio {
+      position : absolute;
+      width : 100%;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      gap : 2rem;
+    }
+    &__contenu {
+        z-index : 9;
+    }
 }
+
+input.hero__radio__input {
+  appearance: none; /* enlève l'apparence native */
+  width: 20px;
+  height: 20px;
+  background-color: $couleur__gris__boite;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input.hero__radio__input:checked {
+  background-color: $couleur__jaune__primaire;
+}
+
+input.hero__radio__input:hover {
+  background-color: $couleur__orange__hover;
+}
+
 
 .hero__icone {
     display: flex;
@@ -42,4 +58,10 @@
   font-size: 1.3rem;
   padding: .7rem;
   border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero__cta:hover {
+  border: 3px solid $couleur__orange__hover;
 }

@@ -5,7 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0000004f;
+
+    @media screen and (max-width: 800px) {
+        position: relative;
+        padding-right: 2rem;
+    }
     
     &__navigation {
         @media screen and (max-width: 800px) {
@@ -15,8 +19,9 @@
             padding-top : 4rem;
             flex-direction: column; 
             width : 100vw;
-            background-color: $couleur__gris__boite;
+            background-color: $couleur__noir__primaire;
             margin-right: 0;
+            padding-bottom: 4rem;
         } 
         width : auto;
         flex-direction: row; 

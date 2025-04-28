@@ -1,8 +1,8 @@
 (function () {
   console.log("carrousel.js");
 
-  const radios = document.querySelectorAll(".hero__radio__input");
-  const carrousels = document.querySelectorAll(".hero__carrousel");
+  let radios = document.querySelectorAll(".hero__radio__input");
+  let carrousels = document.querySelectorAll(".hero__carrousel");
   let indexActif = 0; // Index actuel du carrousel
 
   function activeImage(index) {
