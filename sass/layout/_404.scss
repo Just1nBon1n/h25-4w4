@@ -13,7 +13,7 @@
 
   &_titre {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.21);
+    background-color: $couleur__gris__boite;
     padding: 1rem;
     border-radius: 1rem;
   }
@@ -22,7 +22,7 @@
     font-size: 1.2rem;
     width: 70%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.21);
+    background-color: $couleur__gris__boite;
     padding: 1rem;
     border-radius: 1rem;
   }
@@ -46,17 +46,17 @@
   
         a { //a
           text-decoration : none;
-          color: black;
+          color: $couleur__noir__primaire;
           font-size: 1.2rem;
           padding: .8rem;
           border-radius: 1rem;
-          background-color: #FAD961;
+          background-color: $couleur__jaune__primaire;
           transition: 0.3s ease;
         } 
 
         a:hover {
           padding: 1.4rem;
-          background-color: #e39322;
+          background-color: $couleur__orange__hover;
         }
       }
     }
@@ -65,24 +65,24 @@
 
 .bouton_acceuil {
   font-size: 25px;
-  background-color: black;
+  background-color: $couleur__noir__primaire;
   padding: 1rem;
   border-radius: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease; // Ajout de la transition
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 
   a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s ease; // Transition pour la couleur du texte
+    color: $couleur__blanc__primaire;
+    transition: color 0.3s ease; 
   }
 
   &:hover {
-    background-color: white;
-    transform: scale(1.05); // Légère mise en avant au survol
+    background-color: $couleur__blanc__primaire;
+    transform: scale(1.05); 
   }
 
   &:hover a {
-    color: black;
+    color: $couleur__noir__primaire; 
   }
 }
 

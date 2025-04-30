@@ -120,6 +120,7 @@ Les composants
 .recherche__bouton {
   border-radius: 1rem;
   border: none;
+  background-color: #FFF8E7;
 }
 .recherche__img {
   flex: 0 0 20px;
@@ -147,7 +148,7 @@ Les composants
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(182, 182, 182, 0.7);
+  background-color: rgba(255, 255, 255, 0.322);
   border-radius: 1rem;
 }
 .carte__titre {
@@ -419,7 +420,7 @@ input.hero__radio__input {
   appearance: none; /* enlève l'apparence native */
   width: 20px;
   height: 20px;
-  background-color: rgba(182, 182, 182, 0.7);
+  background-color: rgba(255, 255, 255, 0.322);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -439,7 +440,7 @@ input.hero__radio__input:hover {
 
 .hero__contenu {
   display: inline-block;
-  background-color: rgba(182, 182, 182, 0.7);
+  background-color: rgba(187, 27, 27, 0.547);
   padding: 1rem;
   margin: 10vh 5vw;
   border-radius: 2rem;
@@ -447,7 +448,7 @@ input.hero__radio__input:hover {
 
 .hero__cta {
   border: 3px solid #FBAE3C;
-  background-color: #ede9e2;
+  background-color: #FFF8E7;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   padding: 0.7rem;
@@ -548,7 +549,7 @@ footer {
   align-items: end;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #ede9e2;
+  background-color: rgba(187, 27, 27, 0.547);
   padding: 1.5rem;
   border-radius: 2rem;
 }
@@ -568,7 +569,7 @@ footer {
   border: 3px solid #FBAE3C;
   padding: 0.3rem;
   border-radius: 1rem;
-  background-color: #ede9e2;
+  background-color: #FFF8E7;
   outline: none;
 }
 
@@ -585,7 +586,7 @@ footer {
 }
 .erreur_404_titre {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: rgba(255, 255, 255, 0.322);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -593,7 +594,7 @@ footer {
   font-size: 1.2rem;
   width: 70%;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: rgba(255, 255, 255, 0.322);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -616,41 +617,50 @@ footer {
 }
 .erreur_404_menu .menu-item a {
   text-decoration: none;
-  color: black;
+  color: #001220;
   font-size: 1.2rem;
   padding: 0.8rem;
   border-radius: 1rem;
-  background-color: #FAD961;
+  background-color: #FBAE3C;
   transition: 0.3s ease;
 }
 .erreur_404_menu .menu-item a:hover {
   padding: 1.4rem;
-  background-color: #e39322;
+  background-color: #F6801B;
 }
 
 .bouton_acceuil {
   font-size: 25px;
-  background-color: black;
+  background-color: #001220;
   padding: 1rem;
   border-radius: 1rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .bouton_acceuil a {
   text-decoration: none;
-  color: white;
+  color: #FFF8E7;
   transition: color 0.3s ease;
 }
 .bouton_acceuil:hover {
-  background-color: white;
+  background-color: #FFF8E7;
   transform: scale(1.05);
 }
 .bouton_acceuil:hover a {
-  color: black;
+  color: #001220;
 }
 
-.hero__titre, .hero__description {
+/*
+Animation de la section hero
+*/
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
   position: relative;
-  animation: contenu linear 1s forwards;
+  animation: contenu 1s forwards;
 }
 
 .hero__titre {
@@ -659,6 +669,7 @@ footer {
 
 .hero__description {
   transform: translateX(-1000px);
+  animation-delay: 1s;
 }
 
 @keyframes contenu {

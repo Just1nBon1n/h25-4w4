@@ -45,7 +45,7 @@ input.hero__radio__input:hover {
 
 .hero__contenu {
   display: inline-block;
-  background-color: $couleur__gris__boite;
+  background-color: $couleur__gris__boite_plein;
   padding: 1rem;
   margin: 10vh 5vw;
   border-radius: 2rem;
@@ -53,7 +53,7 @@ input.hero__radio__input:hover {
 
 .hero__cta {
   border: 3px solid $couleur__jaune__primaire;
-  background-color: $couleur__gris__primaire;
+  background-color: $couleur__blanc__primaire;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   padding: .7rem;

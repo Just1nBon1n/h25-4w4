@@ -13,7 +13,7 @@
   align-items: end;
   justify-content: center;
   gap: .5rem;
-  background-color: $couleur__gris__primaire;
+  background-color: $couleur__gris__boite_plein;
   padding: 1.5rem;
   border-radius: 2rem; 
 
@@ -32,6 +32,6 @@
   border: 3px solid $couleur__jaune__primaire;
   padding: .3rem;
   border-radius: 1rem;
-  background-color: $couleur__gris__primaire;
+  background-color: $couleur__blanc__primaire;
   outline: none;
 }
