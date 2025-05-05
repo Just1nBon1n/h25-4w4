@@ -6,17 +6,24 @@
         <?php 
             get_template_part('gabarits/formulaire');
         ?>
-        <section class="populaire">
-            <div class="global">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); 
-                if (in_category("galerie"))  {
-                    the_content() ;
-                } else {    ?>
-                    <?php get_template_part( 'gabarits/carte' ); ?>
-                <?php } ?>
-                <?php endwhile; endif; ?>
-            </div>
-        </section>
+
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <?php if (in_category("galerie")) : ?>
+                    <div class="contenu-galerie">
+                    <?php the_content(); ?>
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
+            <section class="populaire">
+                <?php rewind_posts(); // Remet la boucle au début ?>
+                <?php while (have_posts()) : the_post(); ?>
+                        <?php if (!in_category("galerie")) : ?>
+                        <?php get_template_part('gabarits/carte'); ?>
+                        <?php endif; ?>
+                <?php endwhile; ?>
+            </section>
+        <?php endif; ?>
         <!-- ////////////////////////////////////////////// section rest-API -->
         <section class="destination">
             <?php categories_liste("destination"); ?>

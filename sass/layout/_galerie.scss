@@ -1,6 +1,11 @@
 /*
   --------------------------------- Layout de la galerie
 */
+.contenu-galerie {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .galerie img {
   border-radius: 1rem;
 }
