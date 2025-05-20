@@ -9,6 +9,19 @@
     <div class="svg-container" style="--svg-color: <?php echo esc_attr($svg_couleur); ?>; --svg-height: <?php echo esc_attr($svg_hauteur); ?>;">
         <?php svg_decoratif_from_file('images/wave-haikei.svg'); ?>
     </div>
+    
+    <!-- Footer Image -->
+    <?php
+        $image_id = get_theme_mod('footer_image');
+
+        if ($image_id) {
+            echo '<div class="footer-image-container">';
+            echo wp_get_attachment_image($image_id, 'medium', false, array('class' => 'footer-image'));
+            echo '</div>';
+        }
+    ?>
+
+
     <div class="piedpage global">
         <section class="piedpage__haut">
             <section class="piedpage__s1">

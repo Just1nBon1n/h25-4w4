@@ -167,6 +167,19 @@
       'type' => 'text',
     ));
 
+    // IMAGE de destination dans le footer //////////////////////////////////////
+    $wp_customize->add_setting('footer_image', array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'footer_image', array(
+        'label' => __('Image de destination pour le pied de page', 'theme_tp'),
+        'section' => 'footer_section',
+        'mime_type' => 'image',
+    )));
+
+
 
     ////////////////////////////////////////////// ERREUR 404 SECTION //////////////////////////////////////////////
     // Création d'une nouvelle section dans le customizer

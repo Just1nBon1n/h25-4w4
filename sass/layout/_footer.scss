@@ -5,6 +5,20 @@ footer{
   background-color: $couleur__gris__boite;
 }
 
+.footer-image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-image {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+
+
 .piedpage{
     color: $couleur__blanc__primaire;
     display: flex;
