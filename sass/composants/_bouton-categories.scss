@@ -66,21 +66,25 @@ Bouton catégories
   cursor: pointer;
 }
 
+.destination__list h3 {
+  margin-bottom: 0;
+}
+ 
 // Description
-.destination {
-  &__list p {
-    display: none;
-  }
+.destination__list p {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
-.destination {
-  &__list p.active {
-    display: inline-block;  
-    padding: 1rem;
-    font-size: 1.2rem;
-    background-color: $couleur__orange__secondaire;
-    border-radius: 1rem;
-  }
+.destination__list p.active {
+  max-height: 500px; // assez grand pour le contenu
+  opacity: 1;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: $couleur__orange__secondaire;
+  border-radius: 1rem;
 }
 
 // Lire plus

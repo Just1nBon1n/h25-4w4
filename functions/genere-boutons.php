@@ -22,7 +22,7 @@ function categories_liste($parent_slug) {
   if (!empty($sous_categories)) {
     echo '<ul class="categorie__ul">';
     foreach ($sous_categories as $categorie) {
-        // ❗ Exclure la catégorie nommée "Populaire"
+        // Exclure la catégorie nommée "Populaire"
         if (strtolower($categorie->name) === 'populaire') continue;
 
         echo '<li data-category-id="' . esc_attr($categorie->term_id) . '" class="categorie__ul__li">';

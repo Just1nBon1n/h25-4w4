@@ -4,6 +4,7 @@
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
 ?>
 <footer>
+    <?php svg_decoratif('#FF8C00', '100px', false); ?>
     <div class="piedpage global">
         <section class="piedpage__haut">
             <section class="piedpage__s1">

@@ -6,7 +6,8 @@
   $function_files = array(
     'genere-boutons.php',
     'customizer.php',
-    'options.php'
+    'options.php',
+    'svg-decoratif.php'
   );
 
   // Boucle pour inclure tous les fichiers
