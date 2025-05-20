@@ -2,10 +2,11 @@
   --------------------------------- Layout du pied de page
 */
 footer{
-  background-color: #0000004f;
+  background-color: $couleur__gris__boite;
 }
 
 .piedpage{
+    color: $couleur__blanc__primaire;
     display: flex;
     flex-direction: column;
     &__haut {
@@ -20,11 +21,22 @@ footer{
         flex-direction: column;
         &__externe {
             display: flex;
-            justify-content: center;
             & .menu { //ul
                 display : flex;
                 flex-direction: column;
+                list-style: none;
+                margin: 0;
+                & li {
+                    padding-bottom: 1rem;
+                    & a {
+                        text-decoration: none;
+                        color: $couleur__blanc__primaire;
+                    }
 
+                    & a:hover {
+                        color: $couleur__orange__hover;
+                    }
+                }
             }
         }
     }

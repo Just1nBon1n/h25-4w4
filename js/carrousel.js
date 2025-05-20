@@ -11,7 +11,7 @@
     // Enlève .actif
     hero__carrousels.forEach(c => c.classList.remove("hero__carrousel--active"));
     // Enlève le checked des hero__radios
-    hero__radios.forEach(r => r.checked = false);
+    hero__radios.forEach(r => r.checked = false); 
 
     // Ajoute .actif
     hero__carrousels[index].classList.add("hero__carrousel--active");
@@ -20,13 +20,28 @@
   }
 
   ///////////////////////////////////////////////////////// Animation Carroussel
+  const animations = ["anim-top", "anim-left", "anim-bottom", "anim-zoom", "anim-rotate"];
   function activeAnimation(index) {
-    // Enlève .actif
-    hero__animation.forEach(c => c.classList.remove("hero__animation--active"));
+    const animationElement = document.querySelector(".hero__animation");
+    if (!animationElement) return;
 
-    // Ajoute .actif
-    hero__animation[index].classList.add("hero__animation--active");
+    // Supprime toutes les classes d’animation
+    animations.forEach(anim => animationElement.classList.remove(anim));
+
+    // Supprime aussi la classe d'activation (si utilisée)
+    animationElement.classList.remove("hero__animation--active");
+
+    // Force le reflow (permet de réinitialiser l'état CSS)
+    void animationElement.offsetWidth;
+
+    // Remet la classe active
+    animationElement.classList.add("hero__animation--active");
+
+    // Applique la nouvelle classe d’animation
+    const newClass = animations[index % animations.length];
+    animationElement.classList.add(newClass);
   }
+
 
   setInterval(() => {
     indexActif = (indexActif + 1) % hero__carrousels.length;

@@ -19,7 +19,7 @@ Script JS permettant d'extraire les destinations de voyage
                 category__ul__li.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
                 categoryId = this.dataset.categoryId;
-                fetchDestinations();
+                fetchDestinations(); 
             });
         });
     }

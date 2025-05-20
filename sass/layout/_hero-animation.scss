@@ -13,16 +13,79 @@ Animation de la section hero
   }
 }
 
-.hero__titre {
-  transform: translateY(-1000px);
-}
-.hero__description {
-  transform: translateX(-1000px);
-  animation-delay: 1s;
-}
-
 @keyframes contenu {
-  100% {
+  from {
+    opacity: 0;
+  }
+  to {
     transform: translate(0);
+    opacity: 1;
   }
 }
+
+/* Vers le haut */
+.anim-top .hero__titre {
+  transform: translateY(-1000px);
+  animation: contenu 1s forwards;
+  opacity: 0;
+}
+.anim-top .hero__description {
+  transform: translateY(-1000px);
+  animation: contenu 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Vers la gauche */
+.anim-left .hero__titre {
+  transform: translateX(-1000px);
+  animation: contenu 1s forwards;
+  opacity: 0;
+}
+.anim-left .hero__description {
+  transform: translateX(-1000px);
+  animation: contenu 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Vers le bas */
+.anim-bottom .hero__titre {
+  transform: translateY(1000px);
+  animation: contenu 1s forwards;
+  opacity: 0;
+}
+.anim-bottom .hero__description {
+  transform: translateY(1000px);
+  animation: contenu 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Zoom */
+.anim-zoom .hero__titre {
+  transform: scale(0.1);
+  animation: contenu 1s forwards;
+  opacity: 0;
+}
+.anim-zoom .hero__description {
+  transform: scale(0.1);
+  animation: contenu 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Rotation */
+.anim-rotate .hero__titre {
+  transform: rotate(-180deg);
+  animation: contenu 1s forwards;
+  opacity: 0;
+}
+.anim-rotate .hero__description {
+  transform: rotate(-180deg);
+  animation: contenu 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+

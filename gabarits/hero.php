@@ -1,54 +1,43 @@
 <?php
-  $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
-  $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
-  $hero_cta_text = get_theme_mod('hero_cta_text', 'Default Title');
-  $hero_cta_link = get_theme_mod('hero_cta_link', '#');
-  $hero_texte_couleur = get_theme_mod('hero_texte_couleur', '#000000');
-
-  for ($i = 0; $i <= 2; $i++) {
-    $hero_background[$i] = get_theme_mod('hero_background_' . $i, '');
-}
+$hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
+$hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+$hero_cta_text = get_theme_mod('hero_cta_text', 'Default Title');
+$hero_cta_link = get_theme_mod('hero_cta_link', '#');
+$hero_texte_couleur = get_theme_mod('hero_texte_couleur', '#000000');
+$hero_nombre_images = get_theme_mod('hero_nombre_images', 3);
 ?>
 
-<section class="hero" style="color: <?php echo $hero_texte_couleur; ?>">
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
+<section class="hero" style="color: <?php echo esc_attr($hero_texte_couleur); ?>;">
+
+    <!-- Carrousels dynamiques -->
+    <?php for ($i = 0; $i < $hero_nombre_images; $i++): 
+        $image = get_theme_mod('hero_background_' . $i);
+        if (!$image) continue;
+    ?>
+        <div class="hero__carrousel<?php echo $i === 0 ? ' hero__carrousel--active' : ''; ?>" style="background-image: url(<?php echo esc_url($image); ?>)"></div>
+    <?php endfor; ?>
+
+    <!-- Radios dynamiques -->
     <div class="hero__radio">
-        <input  class="hero__radio__input" data-id_radio="0"   type="radio" name="carroussel"  checked="checked">
-        <input  class="hero__radio__input" data-id_radio="1" type="radio" name="carroussel">
-        <input  class="hero__radio__input" data-id_radio="2" type="radio" name="carroussel">
+        <?php for ($i = 0; $i < $hero_nombre_images; $i++): ?>
+            <input class="hero__radio__input" data-id_radio="<?php echo $i; ?>" type="radio" name="carroussel" <?php echo $i === 0 ? 'checked="checked"' : ''; ?>>
+        <?php endfor; ?>
     </div>
+
+    <!-- Contenus dynamiques (titre/description) -->
     <div class="hero__contenu global">
-        <div class="hero__animation">
+        <div class="hero__animation hero__animation--active">
             <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description"><?php bloginfo('description'); ?></p>
         </div>
+        <p class="hero__courriel"><?php echo esc_html($hero_adresse); ?></p>
+        <p class="hero__adresse">5800 Sherbrooke-est - Montréal (Québec) H1X 2A2</p>
+        <p class="hero__auteur">Auteur : <?php echo esc_html($hero_auteur); ?></p>
 
-        <div class="hero__animation">
-            <h1 class="hero__titre">consectetur adipisicing elit. Lab</h1>
-            <p class="hero__description">Lorem ipsum dolor, sit amet</p>
-        </div>
-
-        <div class="hero__animation">
-            <h1 class="hero__titre">WWWWWWWWWWWW</h1>
-            <p class="hero__description">LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL</p>
-        </div>
-        
-        <p class="hero__courriel">
-            <?php echo($hero_adresse); ?>
-        </p>
-        <p class="hero__adresse">
-            5800 Sherbrooke-est - Montréal (Québec) H1X 2A2
-        </p>
-        <p class="hero__auteur">
-            Auteur : <?php echo $hero_auteur; ?>
-        </p>
-        <form action="<?php echo $hero_cta_link;?>" method="get">
-            <button type="submit" class="hero__cta">
-                <?php echo $hero_cta_text; ?>
-            </button>
+        <form action="<?php echo esc_url($hero_cta_link); ?>" method="get">
+            <button type="submit" class="hero__cta"><?php echo esc_html($hero_cta_text); ?></button>
         </form>
-        <?php get_template_part( 'gabarits/icone' ); ?>
+
+        <?php get_template_part('gabarits/icone'); ?>
     </div>
 </section>

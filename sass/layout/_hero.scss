@@ -22,11 +22,13 @@
 
 input.hero__radio__input {
   appearance: none; /* enlève l'apparence native */
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: $couleur__gris__boite;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border: 4px solid $couleur__noir__primaire;
+  border-radius: 1.5rem;
 }
 
 input.hero__radio__input:checked {

@@ -35,27 +35,36 @@
     
 
     ////////////////////////////////////////////// ajout image en arrière plan
-    for ($i = 0; $i <= 2; $i++) {
+    // Choix du nombre d'images dans le carrousel
+    $wp_customize->add_setting('hero_nombre_images', array(
+      'default' => 3,
+      'sanitize_callback' => 'absint', // pour s’assurer que c’est un entier
+    ));
+
+    $wp_customize->add_control('hero_nombre_images', array(
+      'label' => __('Nombre d’images du carrousel', 'theme_tp'),
+      'section' => 'hero_section',
+      'type' => 'number',
+      'input_attrs' => array(
+        'min' => 1,
+        'max' => 10,
+      ),
+    ));
+
+    for ($i = 0; $i < 10; $i++) {
       $wp_customize->add_setting('hero_background_' . $i, array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
       ));
       ////////////////////////////////////////////// ajout du controle de la donnée
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $i, array(
-        'label' => __('Image en arriere plan ' . ($i+1), 'theme_tp'),
+        'label' => __('Image en arrière plan ' . ($i + 1), 'theme_tp'),
         'section' => 'hero_section',
+        'active_callback' => function() use ($i) {
+          return $i < get_theme_mod('hero_nombre_images', 3);
+        }
       )));
     }
-
-    $wp_customize->add_setting('hero_background', array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    ////////////////////////////////////////////// ajout du controle de la donnée
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-      'label' => __('Image en arriere plan', 'theme_tp'),
-      'section' => 'hero_section',
-    )));
 
 
     ////////////////////////////////////////////// ajout de la donnée (texte du bouton)
