@@ -347,6 +347,38 @@ Bouton catégories
   color: #001220;
 }
 
+.svg-container {
+  --svg-height: 400px;
+}
+.svg-container .svg-vague {
+  height: var(--svg-height);
+  fill: var(--svg-color);
+  width: 100%;
+  display: block;
+}
+
+.svg-flip {
+  transform: scaleY(-1);
+}
+
+.svg-vague rect {
+  fill: #001220;
+}
+
+.svg-vague path {
+  transform-origin: center bottom;
+  fill: var(--svg-color);
+  animation: onde 5s ease-in-out infinite;
+}
+
+@keyframes onde {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */

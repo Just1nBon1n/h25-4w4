@@ -2,9 +2,13 @@
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
+    $svg_couleur = get_theme_mod('svg_footer_couleur', 'rgba(255, 255, 255, 0.322)');
+    $svg_hauteur = get_theme_mod('svg_footer_hauteur', '400px');
 ?>
 <footer>
-    <?php svg_decoratif('#FF8C00', '100px', false); ?>
+    <div class="svg-container" style="--svg-color: <?php echo esc_attr($svg_couleur); ?>; --svg-height: <?php echo esc_attr($svg_hauteur); ?>;">
+        <?php svg_decoratif_from_file('images/wave-haikei.svg'); ?>
+    </div>
     <div class="piedpage global">
         <section class="piedpage__haut">
             <section class="piedpage__s1">

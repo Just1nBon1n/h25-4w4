@@ -145,6 +145,29 @@
       'type' => 'text',
     ));
 
+
+    /////////////////////////////////////////////////////// Couleur de la vague
+    $wp_customize->add_setting('svg_footer_couleur', array(
+      'default' => 'rgba(255, 255, 255, 0.322)',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'svg_footer_couleur', array(
+      'label' => __('Couleur de la vague décorative', 'theme_tp'),
+      'section' => 'footer_section'
+    )));
+
+    /////////////////////////////////////////////////////// Hauteur de la vague
+    $wp_customize->add_setting('svg_footer_hauteur', array(
+      'default' => '400px',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('svg_footer_hauteur', array(
+      'label' => __('Hauteur de la vague', 'theme_tp'),
+      'section' => 'footer_section',
+      'type' => 'text',
+    ));
+
+
     ////////////////////////////////////////////// ERREUR 404 SECTION //////////////////////////////////////////////
     // Création d'une nouvelle section dans le customizer
     $wp_customize->add_section('erreur_404_section', array(
