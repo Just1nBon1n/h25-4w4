@@ -1,6 +1,6 @@
-# TP2 EXAM INTRA erreur 404
+# TP2 Club de voyage
 
-## Réalisation de la page erreur 404
+## Création d’un site WordPress pour un club de voyage
 
 ### Auteur: Justin Bonin
 
