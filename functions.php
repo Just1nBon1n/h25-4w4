@@ -7,7 +7,8 @@
     'genere-boutons.php',
     'customizer.php',
     'options.php',
-    'svg-decoratif.php'
+    'svg-decoratif.php',
+    'icone.php'
   );
 
   // Boucle pour inclure tous les fichiers

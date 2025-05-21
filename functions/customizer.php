@@ -233,6 +233,26 @@
       'label' => __('Couleur du texte', 'theme_tp'),
       'section' => 'erreur_404_section',
     )));
+
+
+    ////////////////////////////////////////////////// Section icones sociales //////////////////////////////////////
+    $wp_customize->add_section('social_section', array(
+        'title' => __('Icônes sociales', 'theme_tp'),
+        'priority' => 35,
+    ));
+
+    $socials = array('facebook', 'linkedin', 'instagram', 'github');
+
+    foreach ($socials as $social) {
+        $wp_customize->add_setting("social_{$social}_link", array(
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        $wp_customize->add_control("social_{$social}_link", array(
+            'label' => "Lien $social",
+            'section' => 'social_section',
+            'type' => 'url',
+        ));
+    }
   }
 
   add_action('customize_register', 'theme_tp_customize_register');

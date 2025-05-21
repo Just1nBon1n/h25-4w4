@@ -37,7 +37,6 @@ $hero_nombre_images = get_theme_mod('hero_nombre_images', 3);
         <form action="<?php echo esc_url($hero_cta_link); ?>" method="get">
             <button type="submit" class="hero__cta"><?php echo esc_html($hero_cta_text); ?></button>
         </form>
-
-        <?php get_template_part('gabarits/icone'); ?>
+        <?php afficher_icones_sociales(); ?>
     </div>
 </section>

@@ -63,7 +63,7 @@
         </section>
         <section class="piedpage__bas">
             <section class="piedpage__icones">
-                <?php get_template_part('gabarits/icone'); ?>
+                <?php afficher_icones_sociales(); ?>
             </section>
             <section class="piedpage__menu">
                 <?php wp_nav_menu(array(
