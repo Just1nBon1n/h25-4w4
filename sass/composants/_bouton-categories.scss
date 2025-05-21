@@ -4,7 +4,7 @@ Bouton catégories
 
 // section destination
 .destination {
-  margin: 25vh 5vw;
+  margin: 100px 5vw;
   padding: 5vh 5vw;
   background-color: $couleur__gris__boite;
   border-radius: 2rem;
@@ -98,3 +98,14 @@ Bouton catégories
   }
 }
   
+.destination-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  & img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
