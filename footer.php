@@ -6,8 +6,8 @@
     $svg_hauteur = get_theme_mod('svg_footer_hauteur', '400px');
 ?>
 <footer>
-    <div class="svg-container" style="--svg-color: <?php echo esc_attr($svg_couleur); ?>; --svg-height: <?php echo esc_attr($svg_hauteur); ?>;">
-        <?php svg_decoratif_from_file('images/wave-haikei.svg'); ?>
+    <div class="svg-container vague-footer" style="--svg-color: <?php echo esc_attr($svg_couleur); ?>; --svg-height: <?php echo esc_attr($svg_hauteur); ?>;">
+        <?php svg_decoratif_from_file('images/wave-haikei.svg', false, 'vague-footer'); ?>
     </div>
     
     <!-- Footer Image -->

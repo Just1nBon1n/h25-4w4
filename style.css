@@ -363,28 +363,32 @@ Bouton catégories
   border-radius: 1rem;
 }
 
-.svg-container {
-  --svg-height: 400px;
-}
-.svg-container .svg-vague {
+.svg-vague {
   height: var(--svg-height);
-  fill: var(--svg-color);
   width: 100%;
   display: block;
 }
-
-.svg-flip {
+.svg-vague.svg-flip {
   transform: scaleY(-1);
 }
-
 .svg-vague rect {
-  fill: #001220;
+  fill: var(--svg-background);
 }
-
 .svg-vague path {
   transform-origin: center bottom;
   fill: var(--svg-color);
   animation: onde 5s ease-in-out infinite;
+}
+
+.vague-footer {
+  --svg-background: #001220;
+}
+
+.vague-section {
+  --svg-background: #001220;
+  --svg-color: rgba(255, 255, 255, 0.322);
+  --svg-height: 180px;
+  transform: scaleY(-1);
 }
 
 @keyframes onde {
