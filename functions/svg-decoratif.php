@@ -6,7 +6,6 @@ function svg_decoratif_from_file($fichier = 'images/wave-haikei.svg', $flip = fa
         $svg = file_get_contents($chemin);
 
         $classes = 'svg-vague';
-        if ($flip) $classes .= ' svg-flip';
         if (!empty($classe)) $classes .= ' ' . esc_attr($classe);
 
         // Injecte la classe dans la balise <svg>

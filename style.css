@@ -368,9 +368,6 @@ Bouton catégories
   width: 100%;
   display: block;
 }
-.svg-vague.svg-flip {
-  transform: scaleY(-1);
-}
 .svg-vague rect {
   fill: var(--svg-background);
 }
@@ -384,10 +381,16 @@ Bouton catégories
   --svg-background: #001220;
 }
 
-.vague-section {
+.vague-section-haut {
   --svg-background: #001220;
   --svg-color: rgba(255, 255, 255, 0.322);
-  --svg-height: 180px;
+  --svg-height: 160px;
+}
+
+.vague-section-bas {
+  --svg-background: #001220;
+  --svg-color: rgba(255, 255, 255, 0.322);
+  --svg-height: 240px;
   transform: scaleY(-1);
 }
 
@@ -861,4 +864,37 @@ Animation de la section hero
   animation: contenu 1s forwards;
   animation-delay: 0.2s;
   opacity: 0;
+}
+
+.pays__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+.menu-pays-ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.menu-pays-ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 15px;
+  background-color: #001220;
+  border-radius: 2rem;
+  border: 2px solid #FFF8E7;
+}
+.menu-pays-ul li:hover {
+  color: #F6801B;
+  border: 2px solid #F6801B;
 }/*# sourceMappingURL=style.css.map */

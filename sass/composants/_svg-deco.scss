@@ -3,10 +3,6 @@
   width: 100%;
   display: block;
 
-  &.svg-flip {
-    transform: scaleY(-1);
-  }
-
   rect {
     fill: var(--svg-background);
   }
@@ -23,10 +19,16 @@
   --svg-background: #001220;
 }
 
-.vague-section {
+.vague-section-haut {
   --svg-background: #001220;
   --svg-color: rgba(255, 255, 255, 0.322);
-  --svg-height: 180px;
+  --svg-height: 160px;
+}
+
+.vague-section-bas {
+  --svg-background: #001220;
+  --svg-color: rgba(255, 255, 255, 0.322);
+  --svg-height: 240px;
   transform: scaleY(-1);
 }
 
