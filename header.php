@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club de voyage</title>
+    <base href="<?php echo esc_url( home_url( '/' ) ); ?>">
     <!-- link rel="stylesheet" href="normalize.css" -->
     <!-- link rel="stylesheet" href="style.css" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

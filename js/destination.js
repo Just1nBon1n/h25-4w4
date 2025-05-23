@@ -6,7 +6,8 @@ Fonctionne avec :
 */
 (function(){
     let categoryId = 2; // ID par défaut pour catégorie
-    const domaine = window.location.origin + '/4w4';
+    // const domaine = window.location.origin + '/4w4';
+    const domaine = document.querySelector('base').href;
 
 
     parcourir_bouton();
