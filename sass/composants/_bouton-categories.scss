@@ -22,17 +22,19 @@ Bouton catégories
     border-radius: 1rem;
     background-color: $couleur__blanc__primaire;
     font-size: 1.4rem;
+    color: $couleur__noir__primaire;
   }
 }
 
 .categorie__ul li:hover {
   background-color: $couleur__gris__boite;
   cursor: pointer;
+  color: $couleur__noir__primaire;
 }
 
 .categorie__ul li.active {
   background-color: $couleur__jaune__primaire;
-  color: black;
+  color: $couleur__noir__primaire;
 }
 
 // Titre
@@ -54,6 +56,7 @@ Bouton catégories
 .destination .bouton::after {
   content: "+";
   font-size: 1.5rem;
+  color: $couleur__noir__primaire;
 }
 
 .destination .bouton.active::after {
