@@ -893,8 +893,13 @@ Animation de la section hero
   background-color: #001220;
   border-radius: 2rem;
   border: 2px solid #FFF8E7;
+  transition: all 0.3s ease;
 }
 .menu-pays-ul li:hover {
   color: #F6801B;
   border: 2px solid #F6801B;
+}
+.menu-pays-ul li.active {
+  color: #FBAE3C;
+  border-color: #FBAE3C;
 }/*# sourceMappingURL=style.css.map */

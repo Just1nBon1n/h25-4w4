@@ -24,9 +24,14 @@
     background-color: $couleur__noir__primaire;
     border-radius: 2rem;
     border: 2px solid $couleur__blanc__primaire;
+    transition: all 0.3s ease;
     &:hover {
       color: $couleur__orange__hover;
       border: 2px solid $couleur__orange__hover;
+    }
+    &.active {
+      color: $couleur__jaune__primaire;
+      border-color: $couleur__jaune__primaire;
     }
   }
 }
